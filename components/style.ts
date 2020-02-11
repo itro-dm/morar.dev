@@ -158,6 +158,7 @@ export const Card = styled.div`
 export const Dashboard = styled.div`
   display: block;
   overflow-x: scroll;
+  background: #e2e3e9;
 
   @media (min-width: 960px) {
     height: 100vh;
