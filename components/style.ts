@@ -155,6 +155,14 @@ export const Card = styled.div`
     opacity: 1;
   }
 `;
+
+export const LogoImg = styled.img`
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  display: block;
+`;
+
 export const Dashboard = styled.div`
   display: block;
   overflow-x: scroll;

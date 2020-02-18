@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Card, Col, Dashboard, Highlight, HomePage } from '../components/style';
+import { Card, Col, Dashboard, HomePage, LogoImg } from '../components/style';
 
 const Home: NextPage<{ userAgent: string }> = () => (
   <HomePage>
@@ -8,12 +8,11 @@ const Home: NextPage<{ userAgent: string }> = () => (
       <Col>
         <Card className="flat small">
           <h1>
-            Dashbo<Highlight>.</Highlight>
+            <LogoImg
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
+              alt="Logo"
+            />
           </h1>
-          <p>
-            excited here, net neutrality syndicated Journal Register shoot a photo hashtag
-            curmudgeon 5% corruption analog.
-          </p>
           <small>
             This Week in Review content is king engagement Romenesko RSS Wikipedia, data
             visualization advertising privacy discuss
