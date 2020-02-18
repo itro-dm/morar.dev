@@ -11,8 +11,8 @@ const Home: NextPage<{ userAgent: string }> = () => (
             Dashbo<Highlight>.</Highlight>
           </h1>
           <p>
-            we're excited you're here, net neutrality syndicated Journal Register shoot a photo
-            hashtag curmudgeon 5% corruption analog.
+            excited here, net neutrality syndicated Journal Register shoot a photo hashtag
+            curmudgeon 5% corruption analog.
           </p>
           <small>
             This Week in Review content is king engagement Romenesko RSS Wikipedia, data
