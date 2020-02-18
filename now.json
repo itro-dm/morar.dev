@@ -1,0 +1,13 @@
+{
+  "name": "morar.dev",
+  "version": 2,
+  "env": {
+  },
+  "build": {
+    "env": {
+    }
+  },
+  "github": {
+    "enabled": false
+  }
+}
