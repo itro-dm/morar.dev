@@ -7,9 +7,6 @@ const Home: NextPage<{ userAgent: string }> = () => (
     <Dashboard>
       <Col>
         <Card className="flat small">
-          <h1>
-            Dashbo<Highlight>.</Highlight>
-          </h1>
           <p>
             excited here, net neutrality syndicated Journal Register shoot a photo hashtag
             curmudgeon 5% corruption analog.
