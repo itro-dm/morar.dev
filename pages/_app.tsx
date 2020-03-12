@@ -1,19 +1,16 @@
-import App, { Container } from 'next/app';
-import React from 'react';
+import App, { AppProps } from 'next/app';
+import React, { ReactElement } from 'react';
 import GlobalStyles from '../styles/global';
-import { ThemeProvider } from '../styles/themed-components';
-import theme from '../styles/theme';
+import Providers from '../components/providers';
 
-class ReactApp extends App<any> {
-  public render() {
+class ReactApp extends App<AppProps> {
+  render(): ReactElement {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <Providers>
         <GlobalStyles />
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </Container>
+        <Component {...pageProps} />
+      </Providers>
     );
   }
 }
