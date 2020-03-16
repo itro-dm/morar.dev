@@ -8,6 +8,7 @@ module.exports = {
         'import/resolver': {
             node: {
                 paths: ['./'],
+                extensions: [".js", ".jsx", ".ts", ".tsx"]
             },
             'babel-module': {},
         },
@@ -42,14 +43,15 @@ module.exports = {
         'jest/no-test-callback': 'warn',
         'jest/prefer-strict-equal': 'warn',
         'jest/prefer-todo': 'warn',
-        'jsx-a11y/anchor-is-valid': [
-            'error',
-            {
-                components: ['Link'],
-                specialLink: ['hrefLeft', 'hrefRight'],
-                aspects: ['invalidHref', 'preferButton'],
-            },
-        ],
+        // TODO: find the reason
+        // 'jsx-a11y/anchor-is-valid': [
+        //     'error',
+        //     {
+        //         components: ['Link'],
+        //         specialLink: ['hrefLeft', 'hrefRight'],
+        //         aspects: ['invalidHref', 'preferButton'],
+        //     },
+        // ],
         '@typescript-eslint/ban-ts-ignore': 'warn',
         '@typescript-eslint/explicit-function-return-type': [
             'warn',
@@ -60,8 +62,8 @@ module.exports = {
         ],
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
-        'jsx-a11y/no-noninteractive-element-interactions': 'warn',
-        'jsx-a11y/click-events-have-key-events': 'warn',
+        // 'jsx-a11y/no-noninteractive-element-interactions': 'warn',
+        // 'jsx-a11y/click-events-have-key-events': 'warn',
         'import/prefer-default-export': 'off',
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/no-var-requires': 'warn',

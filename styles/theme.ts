@@ -10,22 +10,6 @@ interface ISize {
   [key: string]: number;
 }
 
-// Iterate through the sizes and create a media template
-const media = {
-  desktop: (...args: any) => undefined,
-  tablet: (...args: any) => undefined,
-  phone: (...args: any) => undefined,
-};
-
-Object.keys(sizes).reduce((acc: any, label: string) => {
-  acc[label] = (...args: any) => css`
-    @media (max-width: ${sizes[label]}px) {
-      ${css(args.shift(), ...args)}
-    }
-  `;
-  return acc;
-}, media);
-
 const defaultTheme = {
   colors: {
     pink: '#EF85A7',
@@ -34,7 +18,6 @@ const defaultTheme = {
     purple: '#9158FB',
     green: '#4DE1C4',
   },
-  media,
 };
 
 const light = {
@@ -52,5 +35,7 @@ const dark: Theme = {
 };
 
 export type Theme = typeof light;
+
+// TODO: figure out how to fix proper typing
 export const styled = baseStyled as ThemedStyledInterface<Theme>;
 export { light, dark };

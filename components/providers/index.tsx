@@ -1,10 +1,15 @@
 import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
 import { light, dark, Theme } from '../../styles/theme';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { Header } from '../layout/header';
 
 interface IProviders {
   children: ReactNode;
 }
+
+const Main = styled.main`
+  padding-top: 60px;
+`;
 
 const Providers = ({ children }: IProviders): ReactElement => {
   const [currentTheme, setCurrentTheme] = useState<Theme>(light);
@@ -26,10 +31,9 @@ const Providers = ({ children }: IProviders): ReactElement => {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <header>
-        <button onClick={changeCurrentTheme}>toggle</button>
-      </header>
-      <main>{children}</main>
+      <Header changeCurrentTheme={changeCurrentTheme} />
+
+      <Main>{children}</Main>
     </ThemeProvider>
   );
 };

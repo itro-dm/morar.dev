@@ -1,15 +1,15 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import { ServerStyleSheet } from '../styles/themed-components';
+import { ServerStyleSheet } from 'styled-components';
 
 interface IProps {
   styleTags: Array<React.ReactElement<{}>>;
 }
 
 export default class MyDocument extends Document<IProps> {
-  static getInitialProps({ renderPage }) {
+  static getInitialProps({ renderPage }: any) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const page = renderPage((App: any) => (props: any) => sheet.collectStyles(<App {...props} />));
 
     const styleTags = sheet.getStyleElement();
     return { ...page, styleTags };
@@ -19,7 +19,8 @@ export default class MyDocument extends Document<IProps> {
     return (
       <html>
         <Head>
-          <title>peoplefund</title>
+          <title>Dmitry Morar</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           {this.props.styleTags}
         </Head>
         <body>

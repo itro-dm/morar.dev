@@ -1,10 +1,6 @@
 import React from 'react';
 import Sample from '../components/Sample';
 
-const Index = () => (
-  <div>
-    <Sample text="Hello Next.js" />
-  </div>
-);
+const Index = () => <Sample text="Hello Next.js" />;
 
 export default Index;
