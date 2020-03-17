@@ -1,6 +1,7 @@
 import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
+import styled, { ThemeProvider } from '../../styles/themed-components';
 import { light, dark, Theme } from '../../styles/theme';
-import styled, { ThemeProvider } from 'styled-components';
+
 import { Header } from '../layout/header';
 
 interface IProviders {
@@ -16,16 +17,21 @@ const Providers = ({ children }: IProviders): ReactElement => {
 
   useEffect(() => {
     const isDarkExist = localStorage.getItem('isDarkExist');
-    if (isDarkExist) {
+
+    if (isDarkExist === 'true') {
       setCurrentTheme(dark);
+    } else {
+      setCurrentTheme(light);
     }
   }, [currentTheme]);
 
   const changeCurrentTheme = (): void => {
     if (currentTheme === light) {
       setCurrentTheme(dark);
+      localStorage.setItem('isDarkExist', 'true');
     } else {
       setCurrentTheme(light);
+      localStorage.setItem('isDarkExist', 'false');
     }
   };
 

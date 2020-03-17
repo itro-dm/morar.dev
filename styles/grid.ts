@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from './themed-components';
 
 const breakpoints = {
   xxs: '20em', // 320px
@@ -24,7 +24,7 @@ const media = {
   xxxl: `(min-width: ${breakpoints.xxxl})`, // 2240px
 };
 
-const Container = styled.div`
+export const Container = styled.div`
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -53,11 +53,9 @@ const Container = styled.div`
   }
 `;
 
-const Row = styled.div`
+export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-right: -16px;
   margin-left: -16px;
 `;
-
-export { Container, Row };

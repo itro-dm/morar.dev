@@ -10,7 +10,7 @@ const ThemeToggler = ({ changeCurrentTheme }: IThemeToggle): ReactElement => {
     <Wrapper>
       <Input type="checkbox" id="toggle-mode-cb" />
 
-      <Label id="toggle-mode" htmlFor="toggle-mode-cb" onClick={changeCurrentTheme}>
+      <Label htmlFor="toggle-mode-cb" onClick={changeCurrentTheme}>
         <Border>
           <Indicator />
         </Border>

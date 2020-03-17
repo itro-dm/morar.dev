@@ -1,13 +1,13 @@
 import reset from 'styled-reset';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from './themed-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   ${reset}
   * {
     box-sizing: border-box;
   }
   body{
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Ubuntu,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   }
   a {
     color: inherit;
@@ -19,7 +19,9 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
   }
   h1, h2, h3, h4, h5, h6{
-    font-family:'Maven Pro', sans-serif;
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.125rem;    
   }
 
   @media only screen and (max-width: 768px) {
@@ -34,5 +36,3 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `;
-
-export default GlobalStyle;

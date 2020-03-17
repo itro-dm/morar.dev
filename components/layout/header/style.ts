@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from '../../../styles/themed-components';
 import { Container } from '../../../styles/grid';
 
-const Wrapper = styled.header`
+export const Wrapper = styled.header`
   width: 100%;
   background: #fff;
   z-index: 10;
@@ -12,10 +12,8 @@ const Wrapper = styled.header`
   align-items: center;
 `;
 
-const HeaderContainer = styled(Container)`
+export const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
-
-export { Wrapper, HeaderContainer };
