@@ -1,13 +1,16 @@
 import React, { ReactElement } from 'react';
 import { LogoIcon } from '../../icons/logo';
+import Link from 'next/link';
 
 export const Logo = (): ReactElement => {
   return (
     <div>
       <h1>
-        <a href="/">
-          <LogoIcon />
-        </a>
+        <Link href="/">
+          <a>
+            <LogoIcon />
+          </a>
+        </Link>
       </h1>
     </div>
   );
