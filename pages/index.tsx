@@ -13,7 +13,7 @@ const Index = () => {
           </h1>
           <p>I'm a font-end developer, who wants to make world a better place!</p>
         </Intro>
-        <Card title="Cat" link="/" />
+        <Card title="About me" link="/about" />
       </Column>
       <Column>
         <Card title="Cat" link="/" />
