@@ -1,33 +1,54 @@
-import Document, { Head, Main, NextScript } from 'next/document';
-import React from 'react';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { DocumentProps, Head, Html, Main, NextScript } from 'next/document';
+import React, { ReactElement } from 'react';
+import { ServerStyleSheet } from '../styles/themed-components';
+import { GlobalStyles } from '../styles/global';
 
-interface IProps {
-  styleTags: Array<React.ReactElement<{}>>;
-}
-
-export default class MyDocument extends Document<IProps> {
-  static getInitialProps({ renderPage }: any) {
+class MyDocument extends Document<DocumentProps> {
+  static async getInitialProps(ctx: any) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage((App: any) => (props: any) => sheet.collectStyles(<App {...props} />));
+    const originalRenderPage = ctx.renderPage;
 
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App: any) => (props: any) =>
+            sheet.collectStyles(
+              <>
+                <GlobalStyles />
+                <App {...props} />
+              </>
+            ),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
-  render() {
+  render(): ReactElement {
     return (
-      <html>
+      <Html>
         <Head>
           <title>Dmitry Morar</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          {this.props.styleTags}
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
+
+export default MyDocument;
