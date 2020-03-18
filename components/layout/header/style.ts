@@ -3,7 +3,7 @@ import { Container } from '../../../styles/grid';
 
 export const Wrapper = styled.header`
   width: 100%;
-  background: #fff;
+  background: ${({ theme }) => theme.background};
   z-index: 10;
   border-bottom: 1px solid #eaeaea;
   height: 60px;
@@ -16,4 +16,13 @@ export const HeaderContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+export const StyledLink = styled.a`
+  transition: color 0.2s ease;
+  color: ${({ theme }) => theme.accents5};
+
+  &:hover {
+    color: ${({ theme }) => theme.foreground};
+  }
 `;

@@ -10,6 +10,7 @@ interface IProviders {
 
 const Main = styled.main`
   padding-top: 60px;
+  background: ${({ theme }) => theme.background};
 `;
 
 const Providers = ({ children }: IProviders): ReactElement => {

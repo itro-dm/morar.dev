@@ -41,7 +41,7 @@ export const Container = styled.div`
   }
 
   @media ${media.lg} {
-    width: 1152px;
+    width: 1024px;
   }
 
   @media ${media.xl} {

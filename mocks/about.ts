@@ -1,0 +1,85 @@
+export const aboutPageData = {
+  experience: [
+    {
+      date: '07/2019 - present',
+      company: 'NearShorePartner',
+      companyUrl: 'http://nearshorepartner.ch/',
+      position: 'Frontend Developer',
+      projectDesc: 'a big eCommerce site in Switzerland with 300k users per moth',
+      responsibilities: [
+        '- Control of delivering sprint tickets',
+        '- Daily communications with business',
+        '- Setup and Lead scrum meetings',
+        '- Help to adopt new teammates',
+        '- Participate in interview',
+        '- Architectural and design solutions',
+        '- Design and implementation of new features',
+      ],
+      technologies: 'NextJS, React/Redux, TypeScript, StyledComponent, Enzyme, Jest',
+    },
+    {
+      date: '08/2018 - 07/2019',
+      company: 'Ratio Software Engineering',
+      companyUrl: 'https://www.ratiose.com/',
+      position: 'Frontend Developer',
+      projectDesc: 'a big eCommerce site in Switzerland with 300k users per moth',
+      responsibilities: [
+        '- Architectural and design solutions',
+        '- Refactoring existing code',
+        '- Performance profiling and optimizations',
+        '- Release support and bugs fixing',
+        '- Create from scratch custom UI components',
+      ],
+      technologies: 'ES6, SASS/PostCSS, Webpack, Gulp',
+    },
+    {
+      date: '04/2018 - 07/2018',
+      company: 'DevBrother',
+      companyUrl: 'https://devbrother.com/',
+      position: 'Web Developer',
+      projectDesc: 'application based on DLE CMS is hosted video productions (films, series etc)',
+      responsibilities: [
+        '- Support existing feature',
+        '- Create custom UI components and features',
+      ],
+      technologies: 'DLE CMS, ES6, SASS',
+    },
+    {
+      date: '07/2016 - 04/2018',
+      company: 'ITKIN Studio',
+      companyUrl: 'https://itkin.studio//',
+      position: 'Web Developer',
+      projectDesc: 'mostly eCommerce small/middle sites',
+      responsibilities: [
+        '- Build from PDF to HTML responsive markups',
+        '- Mobile-first approach',
+        '- Integrate markup to CMS pages',
+        '- Configure CMS for companies',
+        '- Configure admin panel',
+      ],
+      technologies: 'SASS/SCSS, ES6, jQuery, PHP, WordPress, OpenCart, PrestaShop',
+    },
+  ],
+  education: [
+    {
+      date: '06/07-2019',
+      where: 'easyCode',
+      title: 'ReactJS course',
+    },
+    {
+      date: '03-05/2019',
+      where: 'Udemy',
+      title: 'Modern React with Redux',
+    },
+    {
+      date: '05-07/2015',
+      where: 'JS-bursa',
+      title: 'JavaScript courses',
+    },
+    {
+      date: '03-05/2014',
+      where: 'Telesens Academy',
+      title: 'basic programming course',
+    },
+  ],
+};
