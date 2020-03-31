@@ -26,8 +26,10 @@ export const Header = ({ changeCurrentTheme }: IHeader) => {
     <Wrapper>
       <HeaderContainer>
         <Logo />
-        <LinkWrapper href={'/about'}>About me</LinkWrapper>
-        <LinkWrapper href={'/knowledge'}>What I known</LinkWrapper>
+        <LinkWrapper href={'/about'}>About</LinkWrapper>
+        <LinkWrapper href={'https://www.notion.so/DevWiki-ca55469a791e4a77968cfd48c7c0c0fb'}>
+          What I known
+        </LinkWrapper>
         <LinkWrapper href={'/portfolio'}>What I did</LinkWrapper>
         <LinkWrapper href={'/contacts'}>Contacts</LinkWrapper>
         <ThemeToggler changeCurrentTheme={changeCurrentTheme} />
