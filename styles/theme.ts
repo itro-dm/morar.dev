@@ -31,7 +31,7 @@ const defaultTheme = {
 
 const light = {
   all: { ...defaultTheme },
-  foreground: '#000',
+  foreground: 'rgb(47, 52, 55)',
   background: '#fff',
   accents1: '#fafafa',
   accents2: '#eaeaea',
@@ -67,7 +67,7 @@ const light = {
 const dark: Theme = {
   all: { ...defaultTheme },
   foreground: '#fff',
-  background: '#000',
+  background: 'rgb(47, 52, 55)',
   accents8: '#fafafa',
   accents7: '#eaeaea',
   accents6: '#999999',

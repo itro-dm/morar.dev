@@ -2,22 +2,35 @@ import App, { AppContext, AppInitialProps, AppProps } from 'next/app';
 import React, { ReactElement } from 'react';
 import Providers from '../components/providers';
 
-class ReactApp extends App<AppProps> {
-  static async getInitialProps(context: AppContext): Promise<AppInitialProps> {
+type IAppProps = {
+  pathname: string;
+};
+
+type IAppInitial = AppInitialProps & {
+  pathname: string;
+};
+
+class ReactApp extends App<IAppProps> {
+  static async getInitialProps(context: AppContext): Promise<IAppInitial> {
     let pageProps = {};
     const { Component, ctx } = context;
+    const { pathname } = ctx;
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps };
+    return {
+      pageProps,
+      pathname,
+    };
   }
 
   render(): ReactElement {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, pathname } = this.props;
+
     return (
-      <Providers>
+      <Providers pathname={pathname}>
         <Component {...pageProps} />
       </Providers>
     );

@@ -1,5 +1,15 @@
-import styled from 'styled-components';
+import styled from '../../../styles/themed-components';
 
-const Wrapper = styled.div``;
+export const Circle = styled.span`
+  width: 2rem;
+  height: 2rem;
+  margin: 8px;
+  display: block;
+  background-color: ${({ theme }) => theme.accents8};
+  border-radius: 100%;
+  transition: 0.3s;
 
-export { Wrapper };
+  &:hover {
+    transform: scale(1.5);
+  }
+`;

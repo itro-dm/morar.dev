@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '../../../styles/themed-components';
 
 const Wrapper = styled.div`
   position: relative;
@@ -12,13 +12,14 @@ const Label = styled.label`
 `;
 
 const Border = styled.span`
-  border: 1px solid #1e1f26;
+  border: 1px solid ${({ theme }) => theme.accents7};
   width: 50px;
   height: 20px;
   display: block;
   border-radius: 20px;
   position: relative;
 `;
+
 const Indicator = styled.span`
   width: 16px;
   height: 16px;
@@ -30,7 +31,6 @@ const Indicator = styled.span`
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   box-sizing: border-box;
-
 `;
 
 const Input = styled.input`

@@ -28,6 +28,7 @@ export const Name = styled.h1`
   position: relative;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
+  color: ${({ theme }) => theme.accents8};
 
   &::after {
     content: '';
@@ -85,6 +86,7 @@ export const TitleH2 = styled.h2`
   padding-left: 1rem;
   padding-bottom: 0.5rem;
   position: relative;
+  color: ${({ theme }) => theme.accents7};
 
   &::after {
     content: '';
@@ -98,7 +100,7 @@ export const TitleH2 = styled.h2`
 `;
 
 export const Experience = styled.div`
-  border-left: 1px solid;
+  border-left: 1px solid ${({ theme }) => theme.accents7};
   margin-left: -1.5rem;
 `;
 
@@ -113,6 +115,7 @@ export const CompanyDate = styled.div`
   display: flex;
   width: 35%;
   font-weight: 500;
+  color: ${({ theme }) => theme.accents7};
 
   &::before {
     content: '';
@@ -121,7 +124,7 @@ export const CompanyDate = styled.div`
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
-    background: #000;
+    background-color: ${({ theme }) => theme.accents7};
   }
 `;
 
@@ -140,6 +143,7 @@ export const CompanyDetails = styled.div`
 export const CompanyPosition = styled.p`
   text-transform: uppercase;
   font-weight: 600;
+  color: ${({ theme }) => theme.accents7};
 `;
 
 export const CompanySite = styled.a`
@@ -213,6 +217,7 @@ export const Contacts = styled.div`
 
     svg {
       margin-right: 1rem;
+      fill: ${({ theme }) => theme.accents7};
     }
 
     span {
@@ -222,5 +227,11 @@ export const Contacts = styled.div`
     a {
       color: ${({ theme }) => theme.linkColor};
     }
+  }
+`;
+
+export const Additional = styled.div`
+  li {
+    color: ${({ theme }) => theme.accents7};
   }
 `;

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { LogoIcon } from '../../icons/logo';
 import Link from 'next/link';
+import { Circle } from './style';
 
 export const Logo = (): ReactElement => {
   return (
@@ -8,7 +9,7 @@ export const Logo = (): ReactElement => {
       <h1>
         <Link href="/">
           <a>
-            <LogoIcon />
+          <Circle />
           </a>
         </Link>
       </h1>

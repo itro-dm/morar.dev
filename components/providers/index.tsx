@@ -6,15 +6,19 @@ import { Header } from '../layout/header';
 
 interface IProviders {
   children: ReactNode;
+  pathname: string;
 }
 
 const Main = styled.main`
   padding-top: 60px;
   background: ${({ theme }) => theme.background};
+  position: relative;
 `;
 
-const Providers = ({ children }: IProviders): ReactElement => {
+const Providers = ({ children, pathname }: IProviders): ReactElement => {
   const [currentTheme, setCurrentTheme] = useState<Theme>(light);
+  const HOME_PAGE_PATH = '/';
+  const isHomePage = HOME_PAGE_PATH === pathname;
 
   useEffect(() => {
     const isDarkExist = localStorage.getItem('isDarkExist');
@@ -38,7 +42,7 @@ const Providers = ({ children }: IProviders): ReactElement => {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <Header changeCurrentTheme={changeCurrentTheme} />
+      <Header isHomePage={isHomePage} changeCurrentTheme={changeCurrentTheme} />
 
       <Main>{children}</Main>
     </ThemeProvider>

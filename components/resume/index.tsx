@@ -24,6 +24,7 @@ import {
   TitleH2,
   TitleH3,
   Top,
+  Additional,
 } from './style';
 import { EmailIcon } from '../icons/email';
 import { GlobalIcon } from '../icons/global';
@@ -139,13 +140,13 @@ export const Resume = ({ data }: IResume) => {
             </ul>
           </Contacts>
 
-          <div>
+          <Additional>
             <TitleH2>Additional Skills</TitleH2>
             <ul>
               <li>- English - B1</li>
               <li>- Deep knowledge of good jokes</li>
             </ul>
-          </div>
+          </Additional>
         </RightColumn>
       </Bottom>
     </ResumeWrapper>

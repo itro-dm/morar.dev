@@ -45,7 +45,7 @@ export const aboutPageData = {
       technologies: 'DLE CMS, ES6, SASS',
     },
     {
-      date: '07/2016 - 04/2018',
+      date: '01/2017 - 04/2018',
       company: 'ITKIN Studio',
       companyUrl: 'https://itkin.studio//',
       position: 'Web Developer',
