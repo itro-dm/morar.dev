@@ -7,7 +7,7 @@ export const Logo = (): ReactElement => {
   return (
     <div>
       <h1>
-        <Link href="https://morar.dev/">
+        <Link href="/">
           <a>
             <Circle />
           </a>
