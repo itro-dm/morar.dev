@@ -1,4 +1,4 @@
-import reset from 'styled-reset';
+import { reset } from 'styled-reset';
 import { createGlobalStyle } from './themed-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-  body{
+  body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,Ubuntu,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size: 1.125rem;    
   }
@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.125rem;    
   }
 
-  @media only screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     body {
       font-size: 1rem;
     }
