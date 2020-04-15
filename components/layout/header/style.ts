@@ -17,8 +17,7 @@ export const Wrapper = styled.header<IWrapper>`
 
   ${({ theme }) => theme.all.devices.tablet`
     height: 60px;
-      align-items: center;
-
+    align-items: center;
   `};
 `;
 
@@ -40,12 +39,4 @@ export const StyledLink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.foreground};
   }
-`;
-
-export const MobileTop = styled.div`
-  margin-top: 0.5rem;
-
-  ${({ theme }) => theme.all.devices.tablet`
-    display: none;
-  `};
 `;

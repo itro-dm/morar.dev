@@ -10,9 +10,13 @@ interface IProviders {
 }
 
 const Main = styled.main`
-  padding-top: 60px;
+  padding-top: 85px;
   background: ${({ theme }) => theme.background};
   position: relative;
+
+  ${({ theme }) => theme.all.devices.laptop`
+    padding-top: 60px;
+  `};
 `;
 
 const Providers = ({ children, pathname }: IProviders): ReactElement => {
