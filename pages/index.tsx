@@ -8,10 +8,12 @@ import {
   Label,
   Top,
   Bottom,
+  AvatarWrapper,
 } from '../styles/home-page';
 import { WavingIcon } from '../components/icons/waving';
 import { Container } from '../styles/grid';
 import Link from 'next/link';
+import { Avatar } from '../components/icons/avatar';
 
 interface ILinkWrapper {
   href: string;
@@ -29,6 +31,9 @@ const Index = () => {
     <Container>
       <HomePageWrapper>
         <Top>
+          <AvatarWrapper>
+            <Avatar />
+          </AvatarWrapper>
           <Intro>
             <h1>
               Hi there! I'm Dmitry Morar <WavingIcon />

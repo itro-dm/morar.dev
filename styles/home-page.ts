@@ -10,7 +10,19 @@ export const HomePageWrapper = styled.div`
   justify-content: space-evenly;
 `;
 
-export const Top = styled.div``;
+export const Top = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const AvatarWrapper = styled.div`
+  svg {
+    height: 300px;
+    width: 300px;
+    fill: ${({ theme }) => theme.accents8};
+  }
+`;
 
 export const Bottom = styled.div`
   display: flex;
@@ -23,6 +35,7 @@ export const Intro = styled.div`
   h1 {
     display: flex;
     align-items: center;
+    font-size: 2.5rem;
   }
 
   svg {
