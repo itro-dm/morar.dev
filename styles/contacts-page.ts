@@ -1,10 +1,16 @@
 import styled from './themed-components';
+import { Devices } from './media';
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 60px);
+
+  ${Devices.tablet} {
+    flex-direction: row;
+  }
 `;
 
 export const Item = styled.div`
@@ -12,16 +18,28 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   font-size: 2rem;
+
   span {
-    color: ${({ theme }) => theme.accents7};
+    display: none;
+    color: ${({ theme }) => theme.linkColor};
+
+    ${Devices.tablet} {
+      display: inline-block;
+    }
   }
 
   svg {
     fill: ${({ theme }) => theme.accents7};
-    margin-right: 0.5rem;
-    height: 2rem;
-    width: 2rem;
+    height: 8rem;
+    width: 8rem;
+
+    ${Devices.tablet} {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.5rem;
+    }
   }
+
   a {
     color: ${({ theme }) => theme.linkColor};
   }

@@ -11,12 +11,16 @@ const Contacts = (props: IContacts) => {
   return (
     <Wrapper>
       <Item>
-        <PhoneIcon />
-        <span>+38 (066) 958 20 45</span>
+        <a href="tel:+380669582045">
+          <PhoneIcon />
+          <span>+38 (066) 958 20 45</span>
+        </a>
       </Item>
       <Item>
-        <EmailIcon />
-        <a href="mailto:dmitry@morar.dev">dmitry@morar.dev</a>
+        <a href="mailto:dmitry@morar.dev">
+          <EmailIcon />
+          <span>dmitry@morar.dev</span>
+        </a>
       </Item>
       <Item>
         <a href="https://www.linkedin.com/in/dmitry-morar/">
