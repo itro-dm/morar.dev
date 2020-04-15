@@ -1,29 +1,38 @@
 import styled from '../../styles/themed-components';
+import { Devices } from '../../styles/media';
 
 //TODO: split to small files/components
 export const ResumeWrapper = styled.div``;
 
 export const Top = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   border-bottom: 2px solid ${({ theme }) => theme.accents7};
   margin-bottom: 1rem;
 
-  & > div:first-child {
-    width: 65%;
+  & > div:last-child {
+    margin-bottom: 1rem;
   }
 
-  & > div:last-child {
-    width: 35%;
+  ${Devices.tablet} {
+    flex-direction: row;
+
+    & > div:first-child {
+      width: 65%;
+    }
+
+    & > div:last-child {
+      width: 35%;
+    }
   }
 `;
 
 export const Name = styled.h1`
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: center;
   position: relative;
   padding-bottom: 0.5rem;
@@ -40,20 +49,32 @@ export const Name = styled.h1`
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  ${Devices.tablet} {
+    font-size: 3rem;
+  }
 `;
 
 export const JobTitle = styled.p`
   color: ${({ theme }) => theme.accents6};
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 0.825rem;
+
+  ${Devices.tablet} {
+    font-size: 1.125rem;
+  }
 `;
 
 export const Avatar = styled.img`
   display: block;
   border-radius: 50%;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
+
+  ${Devices.tablet} {
+    width: 50%;
+  }
 `;
 
 export const Bottom = styled.div`
@@ -63,18 +84,29 @@ export const Bottom = styled.div`
 
 export const LeftColumn = styled.div`
   display: flex;
-  width: 65%;
+  width: 100%;
   flex-wrap: wrap;
-  border-right: 1px solid ${({ theme }) => theme.accents7};
+  border: 0;
   padding: 0 1.5rem;
+
+  ${Devices.tablet} {
+    width: 65%;
+    border-right: 1px solid ${({ theme }) => theme.accents7};
+  }
 `;
 
 export const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
-  width: 35%;
-  padding-left: 1rem;
+  width: 100%;
+
   margin-bottom: 1rem;
+  padding: 0 1.5rem;
+
+  ${Devices.tablet} {
+    width: 35%;
+    padding: 0 0 0 1.5rem;
+  }
 `;
 
 export const TitleH2 = styled.h2`
@@ -100,31 +132,44 @@ export const TitleH2 = styled.h2`
 `;
 
 export const Experience = styled.div`
-  border-left: 1px solid ${({ theme }) => theme.accents7};
-  margin-left: -1.5rem;
+  ${Devices.tablet} {
+    margin-left: -1.5rem;
+    border-left: 1px solid ${({ theme }) => theme.accents7};
+  }
 `;
 
 export const Company = styled.div`
-  padding-left: 1.5rem;
   margin-bottom: 1rem;
   display: flex;
+  flex-direction: column;
+  border-bottom: 1px dotted ${({ theme }) => theme.accents7};
+
+  ${Devices.tablet} {
+    flex-direction: row;
+    border-bottom: 0;
+    padding-left: 1.5rem;
+  }
 `;
 
 export const CompanyDate = styled.div`
   position: relative;
   display: flex;
-  width: 35%;
+  width: 100%;
   font-weight: 500;
   color: ${({ theme }) => theme.accents7};
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    background-color: ${({ theme }) => theme.accents7};
+  ${Devices.tablet} {
+    width: 35%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background-color: ${({ theme }) => theme.accents7};
+    }
   }
 `;
 
@@ -170,10 +215,13 @@ export const Technologies = styled.p`
 `;
 
 export const Education = styled.div`
-  border-left: 1px solid;
-  margin-left: -1.5rem;
-  padding-left: 1.5rem;
   width: 100%;
+
+  ${Devices.tablet} {
+    border-left: 1px solid;
+    margin-left: -1.5rem;
+    padding-left: 1.5rem;
+  }
 `;
 
 export const Profile = styled.div`

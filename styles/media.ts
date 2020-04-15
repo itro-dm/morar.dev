@@ -45,6 +45,13 @@ export const devicesSizes: ISize = {
   laptop: 62, // 992px
   desktop: 75, // 1200px
 };
+// TODO: convert old medias approach to this one
+export const Devices = {
+  xmobile: `@media (min-width: 36em)`,
+  tablet: `@media (min-width: 48em)`,
+  laptop: `@media (min-width: 62em)`,
+  desktop: `@media (min-width: 75em)`,
+};
 
 export const media = (Object.keys(devicesSizes) as Array<keyof typeof devicesSizes>).reduce(
   (acc, key) => {
