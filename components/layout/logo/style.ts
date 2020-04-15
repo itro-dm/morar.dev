@@ -8,6 +8,11 @@ export const Circle = styled.span`
   background-color: ${({ theme }) => theme.accents8};
   border-radius: 100%;
   transition: 0.3s;
+  pointer-events: none;
+
+  ${({ theme }) => theme.all.devices.laptop`
+    pointer-events: auto;
+  `};
 
   &:hover {
     transform: scale(1.5);

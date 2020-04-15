@@ -9,6 +9,7 @@ import {
   Top,
   Bottom,
   AvatarWrapper,
+  IntroTitle,
 } from '../styles/home-page';
 import { WavingIcon } from '../components/icons/waving';
 import { Container } from '../styles/grid';
@@ -35,10 +36,14 @@ const Index = () => {
             <Avatar />
           </AvatarWrapper>
           <Intro>
-            <h1>
-              Hi there! I'm Dmitry Morar <WavingIcon />
-            </h1>
-            <p>I'm a font-end developer, who wants to make world a better place!</p>
+            <IntroTitle>
+              <h1>
+                Hi there!
+                <br /> I`m Dmitry Morar
+              </h1>
+              <WavingIcon />
+            </IntroTitle>
+            <p>font-end developer, who wants to make world a better place!</p>
           </Intro>
         </Top>
         <Bottom>

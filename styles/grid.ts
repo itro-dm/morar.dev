@@ -25,17 +25,17 @@ import styled from './themed-components';
 // };
 
 export const Container = styled.div`
-  max-width: 100%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   outline: 0;
   padding-right: 16px;
   padding-left: 16px;
 
-  ${({ theme }) => theme.all.devices.xmobile` width: 540px;`}
-  ${({ theme }) => theme.all.devices.tablet` width: 720px;`}
-  ${({ theme }) => theme.all.devices.laptop` width: 960px;`}
-  ${({ theme }) => theme.all.devices.desktop` width: 1140px;`}
+  ${({ theme }) => theme.all.devices.xmobile`max-width: 540px;`}
+  ${({ theme }) => theme.all.devices.tablet`max-width: 720px;`}
+  ${({ theme }) => theme.all.devices.laptop`max-width: 960px;`}
+  ${({ theme }) => theme.all.devices.desktop`max-width: 1140px;`}
 `;
 
 export const Row = styled.div`
