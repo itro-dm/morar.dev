@@ -8,7 +8,11 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,Ubuntu,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    font-size: 1.125rem;    
+    font-size: 1rem;    
+    line-height: 1.3;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
   }
   a {
     color: inherit;
@@ -25,9 +29,9 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.125rem;    
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 62em) {
     body {
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
   }
 `;
