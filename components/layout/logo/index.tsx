@@ -1,11 +1,10 @@
 import React, { ReactElement } from 'react';
-import { LogoIcon } from '../../icons/logo';
 import Link from 'next/link';
-import { Circle } from './style';
+import { Circle, LogoWrapper } from './style';
 
 export const Logo = (): ReactElement => {
   return (
-    <div>
+    <LogoWrapper>
       <h1>
         <Link href="/">
           <a>
@@ -13,6 +12,6 @@ export const Logo = (): ReactElement => {
           </a>
         </Link>
       </h1>
-    </div>
+    </LogoWrapper>
   );
 };

@@ -1,8 +1,14 @@
 import styled from '../../../styles/themed-components';
 
 const Wrapper = styled.div`
-  position: relative;
+  position: absolute;
   padding: 20px;
+  right: 20px;
+  top: 15px;
+
+  ${({ theme }) => theme.all.devices.tablet`
+    position: relative;
+  `};
 `;
 
 const Label = styled.label`

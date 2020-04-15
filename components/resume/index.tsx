@@ -89,6 +89,7 @@ export const Resume = ({ data }: IResume) => {
       );
     });
   };
+
   // TODO: split by small components
   return (
     <ResumeWrapper>
