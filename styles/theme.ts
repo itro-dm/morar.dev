@@ -1,14 +1,5 @@
 import baseStyled, { ThemedStyledInterface } from 'styled-components';
-
-// const sizes: ISize = {
-//   desktop: 1167,
-//   tablet: 778,
-//   phone: 576,
-// };
-//
-// interface ISize {
-//   [key: string]: number;
-// }
+import { media } from './media';
 
 const defaultTheme = {
   colors: {
@@ -26,6 +17,9 @@ const defaultTheme = {
   sizes: {
     fontPrimary: '1rem',
     fontSmall: '0.875rem',
+  },
+  devices: {
+    ...media,
   },
 };
 
