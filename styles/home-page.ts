@@ -118,7 +118,6 @@ export const Text = styled.span`
   text-transform: lowercase;
   color: ${({ theme }) => theme.accents8};
   position: relative;
-  pointer-events: none;
 
   ${({ theme }) => theme.all.devices.tablet`
     font-size: 3rem;
@@ -126,7 +125,6 @@ export const Text = styled.span`
 
   ${({ theme }) => theme.all.devices.laptop`
     font-size: 7rem;
-    pointer-events: auto;
   `};
 
   &::before {
@@ -153,10 +151,13 @@ export const Label = styled.span`
 
 export const StyledLink = styled.a`
   border-bottom: 1px solid ${({ theme }) => theme.accents6};
-  &:hover {
-    ${Text} {
-      &::before {
-        width: 100%;
+
+  @media (hover: hover) {
+    &:hover {
+      ${Text} {
+        &::before {
+          width: 100%;
+        }
       }
     }
   }
