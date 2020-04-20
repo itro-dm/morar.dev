@@ -4,12 +4,14 @@ export const HomePageWrapper = styled.div`
   display: block;
   height: calc(100vh + 40px);
 
-  ${({ theme }) => theme.all.devices.laptop`
+  ${({ theme }) => theme.all.devices.desktop`
     display: flex;
     margin: 0 auto;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100%;
+
+    // height: calc(100vh - 60px);
     overflow-y: hidden;
     justify-content: space-evenly;
   `};
