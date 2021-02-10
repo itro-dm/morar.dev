@@ -33,7 +33,7 @@ export const Header = ({ changeCurrentTheme, isHomePage }: IHeader) => {
             <StyledLink
               href={'https://www.notion.so/DevWiki-ca55469a791e4a77968cfd48c7c0c0fb'}
               target="_blank">
-              What I known
+              What I know
             </StyledLink>
             {/*<LinkWrapper href={'/portfolio'}>What I did</LinkWrapper>*/}
             <LinkWrapper href={'/contacts'}>Contacts</LinkWrapper>
