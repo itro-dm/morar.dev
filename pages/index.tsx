@@ -43,7 +43,7 @@ const Index = () => {
               </h1>
               <WavingIcon />
             </IntroTitle>
-            <p>font-end developer, who wants to make world a better place!</p>
+            <p>front-end developer, who wants to make world a better place!</p>
           </Intro>
         </Top>
         <Bottom>
